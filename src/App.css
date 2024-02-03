@@ -100,8 +100,8 @@ main {
   flex-shrink: 0;
   position: relative;
   float: left;
-  width: 150px; /* Set your desired fixed width */
-  height: 200px; /* Set your desired fixed height */
+  width: 150px;
+  height: 200px;
   box-shadow: 0 1px 4px rgba(1, 1, 1, 0.15);
   margin: 0 0 60px 40px;
   cursor: pointer;
@@ -148,6 +148,7 @@ main {
 .cardlower {
   display: flex;
   justify-self: start;
+  margin-top: 10px;
 }
 .card h3 {
   font-size: 1rem;
@@ -177,8 +178,8 @@ main {
   flex-shrink: 0;
   position: relative;
   float: left;
-  width: 150px; /* Set your desired fixed width */
-  height: 100px; /* Set your desired fixed height */
+  width: 150px;
+  height: 100px;
   box-shadow: 0 1px 4px rgba(1, 1, 1, 0.15);
   margin: 0 0 60px 40px;
   cursor: pointer;
@@ -214,11 +215,9 @@ main {
 }
 
 .cardupper {
-  margin-bottom: auto; /* Ensures the cardupper is at the top */
-}
-
-.cardlower {
-  margin-top: 10px; /* Ensures the cardlower is at the bottom */
+  margin-bottom: auto;
+  display: flex;
+  justify-self: start;
 }
 
 .card2 h3 {
@@ -231,19 +230,12 @@ main {
   font-weight: 100;
   font-style: italic;
 }
-.pizza.sold-out {
-  color: #888;
-}
 
-.pizza.sold-out img {
-  filter: grayscale();
-  opacity: 0.8;
-}
 .card-description {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* Set the number of lines to display */
-  max-height: 3.6rem; /* Adjust the maximum height as needed */
+  -webkit-line-clamp: 2;
+  max-height: 3.6rem;
   padding: 10px;
 }
