@@ -1,12 +1,18 @@
+import React, { useState } from "react";
 import "./App.css";
-import Sidebar from "./Component/Sidebar.js";
-import MainPage from "./Component/MainPage.js";
+import LoginPage from "./Component/LoginPage.js";
+import ContentPage from "./Component/ContentPage.js";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
   return (
-    <div className="App">
-      <Sidebar></Sidebar>
-      <MainPage></MainPage>
+    <div className="">
+      {isLoggedIn ? <ContentPage /> : <LoginPage onLogin={handleLogin} />}
     </div>
   );
 }

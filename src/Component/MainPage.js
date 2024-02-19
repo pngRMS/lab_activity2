@@ -47,7 +47,6 @@ function MainPage() {
             <div key={index} className="row-col ml-3">
               <div className="row wrap">
                 <Card cardObj={card} />
-
                 {cardData2.map((card2, index2) => (
                   <Card2 key={index2} cardObj={card2} />
                 ))}
