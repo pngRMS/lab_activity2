@@ -43,12 +43,10 @@ function MainPage() {
         </div>
 
         <div className="container mt-4 row">
-          {/* Map through cardData (assuming it has more than one card) */}
           {cardData.map((card, index) => (
             <div key={index} className="row-col ml-3">
               <div className="row wrap">
                 <Card cardObj={card} />
-                {/* Assume that you want to display a card from cardData2 as well */}
                 {cardData2.map((card2, index2) => (
                   <Card2 key={index2} cardObj={card2} />
                 ))}

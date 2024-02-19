@@ -1,7 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 * {
   font-family: Lato, sans-serif;
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login */
+.login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+/* Login */
 .App {
   width: 100vw;
   height: 100vh;
@@ -100,8 +161,8 @@ main {
   flex-shrink: 0;
   position: relative;
   float: left;
-  width: 150px; /* Set your desired fixed width */
-  height: 200px; /* Set your desired fixed height */
+  width: 150px;
+  height: 200px;
   box-shadow: 0 1px 4px rgba(1, 1, 1, 0.15);
   margin: 0 0 60px 40px;
   cursor: pointer;
@@ -111,8 +172,17 @@ main {
 }
 
 .card:hover {
-  color: brown;
   box-shadow: 0 1px 4px rgba(1, 1, 1, 0.852);
+}
+.card:hover p {
+  color: brown;
+}
+.card-status {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .card-content {
   position: relative;
@@ -148,6 +218,7 @@ main {
 .cardlower {
   display: flex;
   justify-self: start;
+  margin-top: 10px;
 }
 .card h3 {
   font-size: 1rem;
@@ -177,8 +248,8 @@ main {
   flex-shrink: 0;
   position: relative;
   float: left;
-  width: 150px; /* Set your desired fixed width */
-  height: 100px; /* Set your desired fixed height */
+  width: 150px;
+  height: 100px;
   box-shadow: 0 1px 4px rgba(1, 1, 1, 0.15);
   margin: 0 0 60px 40px;
   cursor: pointer;
@@ -214,11 +285,9 @@ main {
 }
 
 .cardupper {
-  margin-bottom: auto; /* Ensures the cardupper is at the top */
-}
-
-.cardlower {
-  margin-top: 10px; /* Ensures the cardlower is at the bottom */
+  margin-bottom: auto;
+  display: flex;
+  justify-self: start;
 }
 
 .card2 h3 {
@@ -231,19 +300,12 @@ main {
   font-weight: 100;
   font-style: italic;
 }
-.pizza.sold-out {
-  color: #888;
-}
 
-.pizza.sold-out img {
-  filter: grayscale();
-  opacity: 0.8;
-}
 .card-description {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* Set the number of lines to display */
-  max-height: 3.6rem; /* Adjust the maximum height as needed */
+  -webkit-line-clamp: 2;
+  max-height: 3.6rem;
   padding: 10px;
 }
